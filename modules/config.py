@@ -62,17 +62,17 @@ not os.path.exists(self.configfile):
         return self.database
 
     def getAccounts(self):
-        self.accounts = self.accounts.split(',')
+        accounts = self.accounts.split(',')
         result = []
-        for account in self.accounts:
+        for account in accounts:
             account = account.strip()
             result.append(account.split(':'))
         return result
 
     def getServer(self):
-        self.servers = self.servers.split(',')
+        servers = self.servers.split(',')
         result = []
-        for server in self.servers:
+        for server in servers:
             server = server.strip()
             result.append(server.split(':'))
         return result
